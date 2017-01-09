@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.henryzheng.avtivitysourcetest">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".event.touchEvent.TouchEventActivity1"/>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity android:name=".View.Measure.MeasureActivity"/>
+        <activity android:name=".event.touchEvent.identivityView.TouchEventActivity2"/>
+        <activity android:name=".View.identityView.viewPage.ViewPageActivity">
+        </activity>
+        <activity android:name=".thread.threadLoaclTest.ThreadLocalActivity">
+        </activity>
+        <activity android:name=".Web.webView.WebViewActivity">
+        </activity>
+        <activity android:name=".View.SurfaceViewTest.SurfaceViewTestActivity"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+    </application>
+
+</manifest>
