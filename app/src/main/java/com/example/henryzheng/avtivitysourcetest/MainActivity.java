@@ -11,6 +11,8 @@ import android.widget.ListView;
 
 import com.example.henryzheng.avtivitysourcetest.View.Measure.MeasureActivity;
 import com.example.henryzheng.avtivitysourcetest.View.SurfaceViewTest.SurfaceViewTestActivity;
+import com.example.henryzheng.avtivitysourcetest.View.fragment.fragmentInView
+        .TestFragmentInViewOnActivity;
 import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.ViewPageActivity;
 import com.example.henryzheng.avtivitysourcetest.Web.webView.WebViewActivity;
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.TouchEventActivity1;
@@ -46,6 +48,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         addItem(list, "threadLocal", ThreadLocalActivity.class);
         addItem(list, "webview", WebViewActivity.class);
         addItem(list, "surfaceView", SurfaceViewTestActivity.class);
+        addItem(list, "testFragmentInView", TestFragmentInViewOnActivity.class);
 
         for (int i = 0; i < list.size(); i++) {
             adapter.add(list.get(i).get("name"));

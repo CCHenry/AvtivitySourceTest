@@ -34,9 +34,11 @@
         </activity>
         <activity android:name=".Web.webView.WebViewActivity">
         </activity>
-        <activity android:name=".View.SurfaceViewTest.SurfaceViewTestActivity"
-            android:screenOrientation="landscape"
-            >
+        <activity
+            android:name=".View.SurfaceViewTest.SurfaceViewTestActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".View.fragment.fragmentInView.TestFragmentInViewOnActivity">
         </activity>
     </application>
 

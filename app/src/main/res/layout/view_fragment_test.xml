@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#00f"
+             tools:context="com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+ <fragment
+     android:name="com.example.henryzheng.avtivitysourcetest.View.fragment.fragmentInView.TestFragment"
+     android:layout_width="match_parent"
+     android:id="@+id/frag_test"
+     android:layout_height="match_parent"
+     tools:layout="@layout/fragment_test"/>
+
+</FrameLayout>
