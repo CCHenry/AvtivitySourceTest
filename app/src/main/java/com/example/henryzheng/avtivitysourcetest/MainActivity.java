@@ -11,14 +11,19 @@ import android.widget.ListView;
 
 import com.example.henryzheng.avtivitysourcetest.View.Measure.MeasureActivity;
 import com.example.henryzheng.avtivitysourcetest.View.SurfaceViewTest.SurfaceViewTestActivity;
+import com.example.henryzheng.avtivitysourcetest.View.explosion.explosionfield.ExploseViewActivity;
 import com.example.henryzheng.avtivitysourcetest.View.fragment.fragmentInView
         .TestFragmentInViewOnActivity;
 import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.ViewPageActivity;
+import com.example.henryzheng.avtivitysourcetest.View.tag.TagTestActivity;
 import com.example.henryzheng.avtivitysourcetest.Web.webView.WebViewActivity;
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.TouchEventActivity1;
-import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.TouchEventActivity2;
-
-
+import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView
+        .TouchEventActivity2;
+import com.example.henryzheng.avtivitysourcetest.ipc.applicationHasRepeat.ServiceTestActivity;
+import com.example.henryzheng.avtivitysourcetest.ipc.messenager.MessengerActivity;
+import com.example.henryzheng.avtivitysourcetest.ipc.socket.SocketActivity;
+import com.example.henryzheng.avtivitysourcetest.loadManager.LoadManagerActivity;
 import com.example.henryzheng.avtivitysourcetest.thread.threadLoaclTest.ThreadLocalActivity;
 
 import java.util.ArrayList;
@@ -42,13 +47,18 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                 android.R.layout.simple_dropdown_item_1line);
         addItem(list, "触摸事件传递", TouchEventActivity1.class);
         addItem(list, "触摸事件滑动判断", TouchEventActivity2.class);
-
         addItem(list, "UI绘制测量", MeasureActivity.class);
         addItem(list, "viewPager", ViewPageActivity.class);
         addItem(list, "threadLocal", ThreadLocalActivity.class);
         addItem(list, "webview", WebViewActivity.class);
         addItem(list, "surfaceView", SurfaceViewTestActivity.class);
         addItem(list, "testFragmentInView", TestFragmentInViewOnActivity.class);
+        addItem(list, " ExploseView",ExploseViewActivity.class);
+        addItem(list, "  测试有几个进程，applicaiton会调用几次",ServiceTestActivity.class);
+        addItem(list, " 测试进程间通讯",MessengerActivity.class);
+        addItem(list, " loadManager",LoadManagerActivity.class);
+        addItem(list, " socket",SocketActivity.class);
+        addItem(list, " TagTestActivity",TagTestActivity.class);
 
         for (int i = 0; i < list.size(); i++) {
             adapter.add(list.get(i).get("name"));

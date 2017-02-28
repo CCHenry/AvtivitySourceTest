@@ -6,8 +6,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ViewGroup;
 
 import com.example.henryzheng.avtivitysourcetest.R;
+import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.PageTransformer
+        .DepthPageTransformer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,10 +26,10 @@ public class ViewPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_page);
         mViewPager= (ViewPager) findViewById(R.id.view_page);
-        list.add(new Fragment1("1"));
-        list.add(new Fragment1("2"));
-        list.add(new Fragment1("3"));
-        list.add(new Fragment1("4"));
+        list.add(new Fragment1("1",0xff002200));
+        list.add(new Fragment1("2",0xff300490));
+        list.add(new Fragment1("3",0xff992432));
+        list.add(new Fragment1("4",0xff039932));
 
         mViewPager.setAdapter(new MyFragmentPagerAdapt(getSupportFragmentManager(),list));
         Iterator<Fragment> iterator=list.iterator();
@@ -48,11 +51,13 @@ public class ViewPageActivity extends AppCompatActivity {
 
             }
         });
+        mViewPager.setPageTransformer(true,new DepthPageTransformer());
     }
     class MyFragmentPagerAdapt extends FragmentPagerAdapter{
-
+        List<Fragment> list;
         public MyFragmentPagerAdapt(FragmentManager fm,List<Fragment> list) {
             super(fm);
+            this.list=list;
         }
 
         @Override
@@ -63,6 +68,17 @@ public class ViewPageActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return list.size();
+        }
+
+//        @Override
+//        public Object instantiateItem(ViewGroup container, int position) {
+//
+//            return super.instantiateItem(container, position);
+//        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            super.destroyItem(container, position, object);
         }
     }
 }
