@@ -3,7 +3,7 @@ package com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.Pag
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 /**
  * Created by henryzheng on 2016/12/23.

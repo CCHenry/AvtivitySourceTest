@@ -2,7 +2,7 @@ package com.example.henryzheng.avtivitysourcetest.base;
 
 import android.app.Application;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 /**
  * Created by henryzheng on 2017/2/17.

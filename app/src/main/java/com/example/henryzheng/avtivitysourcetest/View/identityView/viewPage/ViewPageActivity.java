@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 public class ViewPageActivity extends AppCompatActivity {
     ViewPager mViewPager;

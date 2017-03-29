@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".base.MyApplication"
@@ -27,9 +29,6 @@
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
 
         <activity android:name=".View.Measure.MeasureActivity"/>
         <activity android:name=".event.touchEvent.identivityView.TouchEventActivity2"/>
@@ -74,6 +73,25 @@
             android:process=":serverRemove"/>
 
         <activity android:name=".View.tag.TagTestActivity">
+        </activity>
+        <activity android:name=".View.viewMove.DragToMoveViewActivity">
+        </activity>
+        <activity android:name=".View.viewMove.TouchMoveSelfViewActivity">
+        </activity>
+        <activity android:name=".hybrid.HybridActivity">
+        </activity>
+
+        <service
+            android:name=".ipc.aidl.AIDLService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".ipc.aidl.AidlActivity">
+        </activity>
+        <activity android:name=".camera.CustomCameraActivity">
+        </activity>
+        <activity android:name=".View.percent.PercentActivity">
         </activity>
     </application>
 

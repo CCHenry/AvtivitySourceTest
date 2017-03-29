@@ -25,7 +25,13 @@
                 android:id="@+id/lin3"
                 android:layout_width="150dip"
                 android:layout_height="150dip"
-                android:background="#483efa"></com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.Lin3>
+                android:background="#483efa">
+                <com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.MyButton
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:text="button"
+                    android:id="@+id/myBtn"/>
+            </com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.Lin3>
 
         </com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.Lin2>
 

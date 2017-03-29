@@ -10,15 +10,16 @@ import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.Lin1;
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.Lin2;
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.Lin3;
+import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView.MyButton;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 public class TouchEventActivity1 extends Activity {
     BaseLinearLayout lin1;
     BaseLinearLayout lin2;
     BaseLinearLayout lin3;
     private String className;
-
+    MyButton myButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,20 @@ public class TouchEventActivity1 extends Activity {
         lin1 = (Lin1) findViewById(R.id.lin1);
         lin2 = (Lin2) findViewById(R.id.lin2);
         lin3 = (Lin3) findViewById(R.id.lin3);
+        myButton= (MyButton) findViewById(R.id.myBtn);
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CCLog.e("myButton onClick");
+            }
+        });
+
+        myButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return false;
+            }
+        });
 //        lin3.setOnTouchListener(new View.OnTouchListener() {
 //            @Override
 //            public boolean onTouch(View v, MotionEvent event) {
@@ -52,5 +67,10 @@ public class TouchEventActivity1 extends Activity {
         String[] classNames = this.getClass().getName().split("\\.");
         className = classNames[classNames.length - 1];
         return ">>> " + className;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
     }
 }

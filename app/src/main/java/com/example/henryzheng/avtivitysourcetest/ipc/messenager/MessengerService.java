@@ -9,7 +9,7 @@ import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 /**
  * Created by henryzheng on 2017/2/17.
@@ -43,7 +43,6 @@ public class MessengerService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-
         return new Messenger(mHandler).getBinder();
     }
 }

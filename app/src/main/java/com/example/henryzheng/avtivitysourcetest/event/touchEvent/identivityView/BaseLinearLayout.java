@@ -3,10 +3,9 @@ package com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityVie
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 /**
  * onInterceptTouchEvent >>false>>  dispatchTouchEvent  >>true>>  onTouchEvent >>true>> (super)onTouchEvent
@@ -15,10 +14,16 @@ import utils.CCLog;
  */
 public class BaseLinearLayout extends LinearLayout {
     String className = "";
+    public BaseLinearLayout(Context context) {
+        super(context,null);
+    }
 
     public BaseLinearLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        super(context, attrs,0);
+    }
 
+    public BaseLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 
     public String getClassName() {
@@ -27,10 +32,7 @@ public class BaseLinearLayout extends LinearLayout {
         return ">>> "+className;
     }
 
-    public BaseLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
 
-    }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {

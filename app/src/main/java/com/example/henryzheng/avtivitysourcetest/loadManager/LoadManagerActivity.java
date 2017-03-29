@@ -26,7 +26,6 @@ public class LoadManagerActivity extends AppCompatActivity implements LoaderMana
 
     private SimpleCursorAdapter adapter = null;
 
-
     private final int CURSOR_LOADER_ID = 1;
 
     @Override

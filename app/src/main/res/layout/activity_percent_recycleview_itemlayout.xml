@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="30%"
+            app:layout_heightPercent="30%"
+            android:background="#00ff00"
+            android:text="sada"
+            android:id="@+id/tv_name"/>
+        <TextView
+android:layout_toRightOf="@+id/tv_name"            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="30%"
+            app:layout_heightPercent="30%"
+            android:text="sada"
+            android:background="#0000ff"
+
+            android:id="@+id/tv_year"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</LinearLayout>

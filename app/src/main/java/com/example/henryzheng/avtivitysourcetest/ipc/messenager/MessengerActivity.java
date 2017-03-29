@@ -14,7 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.henryzheng.avtivitysourcetest.R;
 
-import utils.CCLog;
+import utils.utils.CCLog;
 
 public class MessengerActivity extends AppCompatActivity {
     Messenger mMessenger;

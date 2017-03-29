@@ -16,14 +16,20 @@ import com.example.henryzheng.avtivitysourcetest.View.fragment.fragmentInView
         .TestFragmentInViewOnActivity;
 import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.ViewPageActivity;
 import com.example.henryzheng.avtivitysourcetest.View.tag.TagTestActivity;
+import com.example.henryzheng.avtivitysourcetest.View.viewMove.DragToMoveViewActivity;
+import com.example.henryzheng.avtivitysourcetest.View.viewMove.TouchMoveSelfViewActivity;
 import com.example.henryzheng.avtivitysourcetest.Web.webView.WebViewActivity;
+import com.example.henryzheng.avtivitysourcetest.camera.CustomCameraActivity;
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.TouchEventActivity1;
 import com.example.henryzheng.avtivitysourcetest.event.touchEvent.identivityView
         .TouchEventActivity2;
+import com.example.henryzheng.avtivitysourcetest.hybrid.HybridActivity;
+import com.example.henryzheng.avtivitysourcetest.ipc.aidl.AidlActivity;
 import com.example.henryzheng.avtivitysourcetest.ipc.applicationHasRepeat.ServiceTestActivity;
 import com.example.henryzheng.avtivitysourcetest.ipc.messenager.MessengerActivity;
 import com.example.henryzheng.avtivitysourcetest.ipc.socket.SocketActivity;
 import com.example.henryzheng.avtivitysourcetest.loadManager.LoadManagerActivity;
+import com.example.henryzheng.avtivitysourcetest.View.percent.PercentActivity;
 import com.example.henryzheng.avtivitysourcetest.thread.threadLoaclTest.ThreadLocalActivity;
 
 import java.util.ArrayList;
@@ -59,6 +65,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         addItem(list, " loadManager",LoadManagerActivity.class);
         addItem(list, " socket",SocketActivity.class);
         addItem(list, " TagTestActivity",TagTestActivity.class);
+        addItem(list, " TestMoveView",DragToMoveViewActivity.class);
+        addItem(list, " TestMoveSelfView",TouchMoveSelfViewActivity.class);
+        addItem(list, " JavascriptInterfaceToConnectActivity",HybridActivity.class);
+        addItem(list, " aidl",AidlActivity.class);
+        addItem(list, " camera",CustomCameraActivity.class);
+        addItem(list, " percent",PercentActivity.class);
 
         for (int i = 0; i < list.size(); i++) {
             adapter.add(list.get(i).get("name"));
