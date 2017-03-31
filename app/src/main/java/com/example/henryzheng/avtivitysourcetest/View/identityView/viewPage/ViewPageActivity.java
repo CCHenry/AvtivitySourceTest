@@ -9,14 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 
 import com.example.henryzheng.avtivitysourcetest.R;
-import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.PageTransformer
-        .DepthPageTransformer;
+import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.PageTransformer.DepthPageTransformer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import utils.utils.CCLog;
 
 public class ViewPageActivity extends AppCompatActivity {
     ViewPager mViewPager;
@@ -36,18 +33,18 @@ public class ViewPageActivity extends AppCompatActivity {
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                CCLog.print("onPageScrolled position:"+position+",positionOffset:"+positionOffset+",positionOffsetPixels:"+positionOffsetPixels);
+//                CCLog.print("onPageScrolled position:"+position+",positionOffset:"+positionOffset+",positionOffsetPixels:"+positionOffsetPixels);
             }
 
             @Override
             public void onPageSelected(int position) {
-                CCLog.print("onPageSelected position"+position);
+//                CCLog.print("onPageSelected position"+position);
 
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                CCLog.print("onPageScrollStateChanged state"+state);
+//                CCLog.print("onPageScrollStateChanged state"+state);
 
             }
         });

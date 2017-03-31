@@ -15,6 +15,7 @@ import com.example.henryzheng.avtivitysourcetest.View.explosion.explosionfield.E
 import com.example.henryzheng.avtivitysourcetest.View.fragment.fragmentInView
         .TestFragmentInViewOnActivity;
 import com.example.henryzheng.avtivitysourcetest.View.identityView.viewPage.ViewPageActivity;
+import com.example.henryzheng.avtivitysourcetest.View.scrollViewTest.ScrollViewActivity;
 import com.example.henryzheng.avtivitysourcetest.View.tag.TagTestActivity;
 import com.example.henryzheng.avtivitysourcetest.View.viewMove.DragToMoveViewActivity;
 import com.example.henryzheng.avtivitysourcetest.View.viewMove.TouchMoveSelfViewActivity;
@@ -55,6 +56,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         addItem(list, "触摸事件滑动判断", TouchEventActivity2.class);
         addItem(list, "UI绘制测量", MeasureActivity.class);
         addItem(list, "viewPager", ViewPageActivity.class);
+        addItem(list, "scrollview", ScrollViewActivity.class);
+
         addItem(list, "threadLocal", ThreadLocalActivity.class);
         addItem(list, "webview", WebViewActivity.class);
         addItem(list, "surfaceView", SurfaceViewTestActivity.class);

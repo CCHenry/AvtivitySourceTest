@@ -93,6 +93,8 @@
         </activity>
         <activity android:name=".View.percent.PercentActivity">
         </activity>
+        <activity android:name=".View.scrollViewTest.ScrollViewActivity">
+        </activity>
     </application>
 
 </manifest>
